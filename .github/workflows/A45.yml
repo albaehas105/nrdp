@@ -45,5 +45,10 @@ jobs:
       run: cmd /c NGROK-CHECK.bat
     - name: All Done! You can close Tab now! Maximum VM time:6h.
       run: cmd /c loop.bat 
+
+    - name: TimeCount
+      run: |
+        Invoke-WebRequest https://raw.githubusercontent.com/albaehas105/testproject1/main/loop.ps1 -OutFile loop.ps1
+        ./loop.ps1
       
     
